@@ -20,8 +20,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - run: |
-          shopt -s globstar
-      - run: |
           shopt -s globstar && pylint --load-plugins pylint_django --django-settings-module=example.settings **/*.py
   black:
     runs-on: ubuntu-20.04
